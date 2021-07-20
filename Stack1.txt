@@ -1,0 +1,50 @@
+백준 문제 - 1874 스택수열
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException{
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+
+		StackInteger stack = new Stack();
+
+		int N = Integer.parseInt(br.readLine());
+
+		int F = 0;
+
+		while (N--  0) {   --  은 variable--; variable0; 두가지를 합친것! 즉 0보다 조건 값을 뺀 값이 클 경우를 말한다.
+
+			int V = Integer.parseInt(br.readLine());
+
+			if (V  F) {
+				for (int i = F + 1; i = V; i++) {
+					stack.push(i);
+					sb.append(+).append(n);
+				}
+				F = V;
+			}
+			
+			else if(stack.peek() != V) {
+				System.out.println(NO);
+				return;
+			}
+			
+			stack.pop();
+			sb.append(-).append(n);
+		}
+		System.out.println(sb);
+	}
+	
+}
+
+/*
+스택을 처음 접하는데 생각보다 쉬운 알고리즘은 아닌듯 하다...
+직접 풀었다기 보다는 동영상을 통해 알고리즘 구조에대해서 이해하려고 노력했고
+앞으로 익수해질때 까지 문제를 찾아서 풀어볼 생각이다.
+*/
